@@ -27,9 +27,16 @@ $ haros analysis ...
 ## Tools and Components
 
 - `harosmake`, the *compiler* (model extractor)
+    * depends on `haros-metamodel`
+    * depends on `haroscpp`
+    * depends on `harospy`
+    * depends on `haroslaunch`
 - `haroscpp`, the `roscpp` parser, interpreter and code generator
+    * depends on `haros-metamodel`
 - `harospy`, the `rospy` parser, interpreter and code generator
+    * depends on `haros-metamodel`
 - `haroslaunch`, the launch XML file parser and interpreter
+    * depends on `haros-metamodel`
 - `haroscheck`, the plugin-driven analyser
 - `harosviz`, the model and report visualizer
 
