@@ -10,13 +10,13 @@ $ haros init
 ```
 
 - creates a new haroshome dir
-- sets the HAROS_HOME environment variable to the path of the new dir
+- sets the `HAROS_HOME` environment variable to the path of the new dir
 
 ```
 $ haros config ...
 ```
 
-- sets global options in the haros.config file for the current/default HAROS_HOME
+- sets global options in the `haros.config` file for the current/default `HAROS_HOME`
 
 ```
 $ haros analysis ...
