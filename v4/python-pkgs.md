@@ -1,6 +1,29 @@
 # Implementation Architecture
 
-## Python Packages
+## Python Packages (Multi-distribution Approach)
+
+The multi-distribution approach is appealing from a developer's point of view.
+Everything can be implemented, fixed and iterated independently.
+However, there are some caveats.
+From a user's point of view, installing new features or updating HAROS to get the latest fixes is not so straightforward, e.g.,
+
+```
+$ pip install -U haroscpp
+```
+
+Instead of
+
+```
+$ pip install -U haros
+```
+
+This could be circumvented by pushing a new version of `haros` everytime one of the dependencies is fixed.
+But, in practice, that gives us only one additional way to mess things up (e.g., forgetting to update `haros`), and achieves exactly the same thing as packing everything under a single distribution.
+The root cause of this is *coupling* - every component is tightly coupled to the metamodel, and any changes to that must propagate all the way up.
+
+This is not to say that this approach does not work.
+It does, but the development and installation process is likely to be more involved.
+Versions and dependencies have to be well managed.
 
 ### Distribution: `haros-metamodel`
 
