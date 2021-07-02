@@ -22,8 +22,8 @@ But, in practice, all that gives us is one additional way to mess things up (e.g
 The root cause of this is *coupling* - every component is tightly coupled to the metamodel, and any changes to that must propagate all the way up.
 
 This is not to say that this approach does not work.
-It does, but the development and installation process is likely to be more involved.
-Versions and dependencies have to be well managed.
+It does, but the development process requires careful version and dependency management.
+Perhaps some of it could be automated with scripts.
 
 ### Distribution: `haros-metamodel`
 
