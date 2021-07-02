@@ -102,11 +102,14 @@ Library and tool to parse and interpret `roscpp` and `rclcpp` files (extract Nod
 
 ```
 + haros (namespace)
-    + parsers (namespace)
-        - roscpp.py
-        - rclcpp.py
+    + parsing (namespace)
+        + roscpp
+        + rclcpp
+    + extraction (namespace)
+        + roscpp
+        + rclcpp
 + haroscpp
-    - ...
+    - main.py
 ```
 
 ### Distribution: `harospy`
