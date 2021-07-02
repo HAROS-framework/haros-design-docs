@@ -1,5 +1,15 @@
 # Implementation Architecture
 
+## Python Packages (Core+Tools Distribution Approach)
+
+The Core+Tools distribution approach packs the core of HAROS (metamodel, parsers, analysis, cli) under a single distribution, and keeps other tools (e.g., `harosviz`) separate.
+
+It is easier for users to install and update.
+Every new feature and bug fix bumps the version counter of the core, which is straightforward to release and update.
+
+This approach is slightly inconvenient in the sense that many completely unrelated issues (e.g., parsing, file system, etc.) will get bundled up in the same repository.
+Even with a multi-distribution approach this might happen, as users will likely gravitate towards the main/meta `haros` repository.
+
 ## Python Packages (Multi-distribution Approach)
 
 The multi-distribution approach is appealing from a developer's point of view.
