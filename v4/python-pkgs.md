@@ -33,17 +33,17 @@ Provides the core of HAROS (metamodel, parsers, cli).
         - ros2.py
         - structs.py
         - logic.py
-    + lang
+    + parsing
         + roscpp
-            - parser.py
-            - extractor.py
         + rospy
-            - parser.py
-            - extractor.py
         + roslaunch
-            - parser.py
-            - interpreter.py
-    + builder
+        + rospkg
+    + extraction
+        + roscpp
+        + rospy
+        + rospkg
+        + roslaunch
+    + build
         - project.py
         - configuration.py
         - filesystem.py
