@@ -50,8 +50,6 @@ Provides the core of HAROS (metamodel, parsers, cli).
         - node.py
     + analysis
         - plugin_interface.py
-+ haros_plugins (namespace)
-    - metamodel.py (read-only objects wrapping true model)
 ```
 
 
