@@ -17,7 +17,7 @@ Instead of
 $ pip install -U haros
 ```
 
-This could be circumvented by pushing a new version of `haros` everytime one of the dependencies is fixed.
+This could be circumvented by pushing a new version of `haros` every time one of the dependencies is fixed.
 But, in practice, that gives us only one additional way to mess things up (e.g., forgetting to update `haros`), and achieves exactly the same thing as packing everything under a single distribution.
 The root cause of this is *coupling* - every component is tightly coupled to the metamodel, and any changes to that must propagate all the way up.
 
