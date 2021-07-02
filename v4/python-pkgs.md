@@ -10,6 +10,51 @@ Every new feature and bug fix bumps the version counter of the core, which is st
 This approach is slightly inconvenient in the sense that many completely unrelated issues (e.g., parsing, file system, etc.) will get bundled up in the same repository.
 Even with a multi-distribution approach this might happen, as users will likely gravitate towards the main/meta `haros` repository.
 
+### Distribution: `haros`
+
+Provides the core of HAROS (metamodel, parsers, cli).
+
+```
++ haros
+    + cli
+        - haros.py
+        - haroscpp.py
+        - harospy.py
+        - haroslaunch.py
+        - harosbuild.py
+    + filesystem
+        - ros.py
+        - ros2.py
+        - common.py
+    + storage
+        + tinydb
+    + metamodel
+        - ros.py
+        - ros2.py
+        - structs.py
+        - logic.py
+    + lang
+        + roscpp
+            - parser.py
+            - extractor.py
+        + rospy
+            - parser.py
+            - extractor.py
+        + roslaunch
+            - parser.py
+            - interpreter.py
+    + builder
+        - project.py
+        - configuration.py
+        - filesystem.py
+        - node.py
+    + analysis
+        - plugin_interface.py
++ haros_plugins (namespace)
+    - metamodel.py (read-only objects wrapping true model)
+```
+
+
 ## Python Packages (Multi-distribution Approach)
 
 The multi-distribution approach is appealing from a developer's point of view.
@@ -88,34 +133,6 @@ Model and report visualizer.
 ### Distribution: `haros`
 
 Depends on all the above (sort of a metapackage with cli and storage).
-
-```
-+ haros (package, core)
-    + cli (input)
-    + filesystem (ws)
-        - ros.py
-        - ros2.py
-        - common.py
-    + storage (input/output, package, core)
-        + tinydb (package, core)
-    + data (package, core)
-        - ros.py        (core)
-        - ros2.py       (core)
-        - structs.py    (core)
-        - logic.py      (core)
-    + parsers (model)
-        + cmake
-        + roscpp
-        + rospy
-        + rclcpp
-        + rclpy
-        + launchxml
-        + pkgxml
-    + analysis
-        - plugin_interface.py
-+ haros_plugins (namespace)
-    - metamodel.py (read-only objects wrapping true model)
-```
 
 ## Possibly Relevant Links
 
