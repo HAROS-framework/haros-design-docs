@@ -25,6 +25,9 @@ This is not to say that this approach does not work.
 It does, but the development process requires careful version and dependency management.
 Perhaps some of it could be automated with scripts.
 
+A benefit of this approach is that it is easier to keep the core *minimal*.
+It allows optional features (e.g., parsing Python) to be installed separately at any point in time.
+
 ### Distribution: `haros-metamodel`
 
 Library with the HAROS metamodel.
