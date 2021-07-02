@@ -1,5 +1,7 @@
 # Implementation Architecture
 
+See [Packaging Guidelines](https://packaging.python.org/tutorials/packaging-projects/) for instructions on how to package and distribute modern projects.
+
 ## Python Packages (Core+Tools Distribution Approach)
 
 The Core+Tools distribution approach packs the core of HAROS (metamodel, parsers, analysis, cli) under a single distribution, and keeps other tools (e.g., `harosviz`) separate.
