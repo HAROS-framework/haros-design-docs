@@ -5,21 +5,21 @@ The smaller tools can be used/installed/developed independently.
 
 ## Commands
 
-```
-$ haros init
+```bash
+haros init [PATH]
 ```
 
-- creates a new haroshome dir
-- sets the `HAROS_HOME` environment variable to the path of the new dir
+- creates a new `.haros` home dir at `PATH` (default: `~/.haros`)
+- ~~sets the `HAROS_HOME` environment variable to the path of the new dir~~
 
-```
-$ haros config ...
+```bash
+haros config ...
 ```
 
 - sets global options in the `haros.config` file for the current/default `HAROS_HOME`
 
-```
-$ haros analysis ...
+```bash
+haros analysis ...
 ```
 
 - executes the analysis workflow (on a given project?)
